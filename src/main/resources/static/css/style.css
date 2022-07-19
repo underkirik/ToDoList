@@ -1,0 +1,108 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	margin: 20px 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	font-family: 'font', sans-serif;
+}
+
+#task-form {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: #88888878;
+}
+
+#task-form form {
+    background-color: white;
+    border: 1px solid #333;
+    width: 300px;
+    padding: 20px;
+}
+
+#save-task, redact-this-task{
+    display: flex;
+}
+
+.task {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.task-link {
+    display: inline-block;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#show-add-task-form {
+    margin-bottom: 20px;
+}
+
+#task-form h2 {
+    margin-top: 0;
+}
+
+#task-form label {
+    display: block;
+}
+
+#task-form form > * {
+    margin-bottom: 5px;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+.main-header {
+    margin: 10px 0;
+}
+
+.date {
+    display: block;
+    margin: 0;
+}
+
+/* Кнопки стиля */
+.btn {
+    background-color: rgb(27, 51, 75); /* Синий фон */
+    border: none; /* Удалить границы */
+    color: white; /* Белый текст */
+    padding: 5px 5px; /* Немного отступов */
+    font-size: 15px; /* Установите размер шрифта */
+    cursor: pointer; /* Указатель мыши при наведении */
+    border-radius: 5px;
+    margin-left: 5px;
+  }
+  
+  /* Более темный фон при наведении курсора мыши */
+  .btn:hover {
+    background-color: rgb(8, 16, 39);
+    box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+

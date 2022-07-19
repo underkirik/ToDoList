@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/js/jquery-3.4.0.min.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body>
+    <div id="task-form">
+        <form>
+            <h2>Добавление задачи</h2>
+            <label>Наименование задачи:</label>
+            <input type="text" name="name" value="">
+            <label>Дата начала задачи:</label>
+            <input type="text" name="startTask" value="">
+            <label>Дата закрытия задачи:</label>
+            <input type="text" name="endTask" value="">
+            <hr>
+            <button id="save-task">Сохранить</button>
+            <button id="redact-this-task">Редактировать</button>
+        </form>
+    </div>
+    <h1 class="main-header">Список дел</h1>
+    <button class="btn" id="show-add-task-form">Добавить задачу</button>
+    <button class="btn" id="delete-all-tasks"><i class="fa fa-trash"></i> Очистить список</button>
+    <div id="task-list">
+        <div class="task" th:attr="data-id=${task.id}" th:each="task : ${tasks}">
+            <a href="#" class="task-link" th:attr="data-id=${task.id}" th:text="${task.name}"></a>
+            <button class="btn" id="delete-task"><i class="fa fa-check-circle"></i></button>
+            <button class="btn" id="redact-task"><i class="fa fa-pencil"></i></button>
+        </div>
+    </div>
+</body>
+</html>

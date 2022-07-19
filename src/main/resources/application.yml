@@ -1,0 +1,10 @@
+server:
+  port: 8085
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/taskrepository?useSSL=false&useUnicode=true&serverTimezone=UTC
+    username: #YOUR_DATABASE_LOGIN#
+    password: #YOUR_DATABASE_PASSWORD#
+  jpa:
+    hibernate:
+      ddl-auto: update
